@@ -70,10 +70,13 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
+       
         configuration.setAllowedOrigins(
-            List.of("http://localhost:3000"),
-            List.of("https://campuscarehelp.netlify.app")
-        );
+    List.of(
+        "http://localhost:3000",
+        "https://campuscarehelp.netlify.app"
+    )
+);
 
         configuration.setAllowedMethods(
             List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
